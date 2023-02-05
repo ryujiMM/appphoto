@@ -4,27 +4,24 @@ import pandas as pd
 from PIL import Image
 import time
 
-st.title("" Life")
+st.title("Life")
+
 left_column, right_column = st.columns(2)
 button = left_column.button('たっくん好き？')
 if button:
     right_column.write('ありがとう！')
 
-st.write("プログレスバーの表示")
-"Start!!"
+# st.write("プログレスバーの表示")
+# "Start!!"
 
-latest_iteration = st.empty()
-bar = st.progress(0)
+# latest_iteration = st.empty()
+# bar = st.progress(0)
 
-for i in range(100):
-    latest_iteration.text(f'iteration {i+1}')
-    time.sleep(0.03)
-'Done!!'
+# for i in range(100):
+#     latest_iteration.text(f'iteration {i+1}')
+#     time.sleep(0.03)
+# 'Done!!'
 
-expander = st.expander("Q:いつ生まれた？")
-expander.write('2023年1月29日')
-expander = st.expander("Q:どこで生まれた？")
-expander.write('横浜市立みなと赤十字病院')
 
 option=""
 option = st.selectbox(
@@ -41,15 +38,21 @@ if st.sidebar.checkbox('たっくん好き？'):
     st.image(img, caption="たっくん生まれたて", use_column_width=True)
 
 
-text = st.sidebar.text_input('たっくんへのメッセージを送ってください。')
-'たっくんへのメッセージ:',text
+# text = st.sidebar.text_input('たっくんへのメッセージを送ってください。')
+# 'たっくんへのメッセージ:',text
 
-condition = st.sidebar.slider("たっくんの愛は何%？",0,100,50)
+condition = st.slider("たっくんの愛は何%？",0,100,50)
 'たっくんへの愛',condition
 
 if condition>90:
     img = Image.open("tatsuki.jpg")
     st.image(img, caption="ありがとう", use_column_width=True)
+
+expander = st.expander("Q:いつ生まれた？")
+expander.write('秘密')
+expander = st.expander("Q:どこで生まれた？")
+expander.write('秘密')
+
 # df = pd.DataFrame(
 #     np.random.rand(100,2)/[50,50] + [35.69,139.70],
 #     columns=['lat','lon']
