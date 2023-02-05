@@ -33,7 +33,7 @@ if option != "":
     img = Image.open(str(option)+".jpeg")
     st.image(img, caption="たっくん", use_column_width=True)
 
-if st.sidebar.checkbox('たっくん好き？'):
+if st.checkbox('たっくん好き？'):
     img = Image.open("tatsuki.jpg")
     st.image(img, caption="たっくん生まれたて", use_column_width=True)
 
