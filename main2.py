@@ -4,7 +4,7 @@ import pandas as pd
 from PIL import Image
 import time
 
-st.title("Life")
+st.title("たっくん's Life")
 
 left_column, right_column = st.columns(2)
 button = left_column.button('たっくん好き？')
